@@ -45,15 +45,14 @@ func UpdateUser(c *gin.Context) {
 	if err != nil {
 		panic(err.Error())
 	}
-
 	user := Schema.User{User_id: id, Username: c.PostForm("username"), Password: c.PostForm("password")}
-	affected, err := db.UpdateUser(user)
+	_, err = db.UpdateUser(user)
 	if err != nil {
 		panic(err.Error())
 	}
-	if affected > 0 {
-		c.JSON(200, user)
-	} else {
-		panic("")
-	}
+	c.JSON(200, user)
+}
+
+func PatchUpdateUser(c *gin.Context) {
+	db.PatchUpdateUser(c)
 }
