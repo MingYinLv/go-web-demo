@@ -15,8 +15,9 @@ func main() {
 	{
 		user := v1.Group("/user")
 		user.GET("/:id", handle.GetUserById)
-		user.POST("/", handle.AddUser)
+		user.POST("", handle.AddUser)
 		user.PUT("/:id", handle.UpdateUser)
+		user.PATCH("/:id", handle.PatchUpdateUser)
 		user.DELETE("/:id", handle.DeleteUserById)
 	}
 	router.Run()
