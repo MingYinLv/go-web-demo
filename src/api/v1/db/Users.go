@@ -1,7 +1,7 @@
 package db
 
 import (
-	"api/v1/db/Schema"
+	"webtest/src/api/v1/db/Schema"
 	"fmt"
 	"github.com/gin-gonic/gin"
 )

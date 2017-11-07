@@ -1,8 +1,8 @@
 package handle
 
 import (
-	"api/v1/db"
-	"api/v1/db/Schema"
+	"webtest/src/api/v1/db"
+	"webtest/src/api/v1/db/Schema"
 	"github.com/gin-gonic/gin"
 	"strconv"
 )

@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"router/handle"
+	"webtest/src/router/handle"
 )
 
 func main() {
